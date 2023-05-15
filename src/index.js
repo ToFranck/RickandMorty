@@ -1,13 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import CharactersList from "./pages/charactersList/CharactersList";
+import Root from "./routes/root";
+import Home from "./pages/home/Home";
+import Episodes from "./pages/episodes/Episodes";
+
+
+
+const router = createBrowserRouter([
+  {
+    element: <Root />,
+    children: [
+   
+      { path: "/", element: <Home /> },
+      { path: "characters", element: <CharactersList /> },
+      // { path: "characters/:id", element: <CharactersList /> },
+      { path: "episodes", element: <Episodes /> },
+
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

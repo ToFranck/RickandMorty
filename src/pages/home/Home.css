@@ -1,0 +1,12 @@
+.hero {
+    background-image: url('https://serieall.fr/images/1920_330/rick-and-morty-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.2;
+    margin-top: -20px;
+ 
+}
+
