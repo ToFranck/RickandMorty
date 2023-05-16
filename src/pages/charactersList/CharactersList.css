@@ -3,10 +3,59 @@
     /* background-color: red; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* justify-content: space-between; */
     padding: 20px;
-    margin: 20px 500px 0 500px;
+    margin: 20px 25% 0 25%;
 
 
 }
+
+/* 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+}
+
+.left {
+    
+    flex: 25%;
+}
+
+.middle {
+    
+    flex: 50%;
+}
+
+.right {
+    flex: 25%;
+} */
+
+
+@media (max-width: 1600px) {
+
+    .card-list {
+        margin: 20px 20% 0 20%;
+    }
+
+  }
+
+
+@media (max-width: 1400px) {
+
+    .card-list {
+        margin: 20px 15% 0 15%;
+    }
+
+  }
+
+@media (max-width: 1000px) {
+
+    .card-list {
+        margin: 20px 10% 0 10%;
+    }
+
+  }
 

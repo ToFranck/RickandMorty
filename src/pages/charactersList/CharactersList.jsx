@@ -31,12 +31,30 @@ export default function CharactersList() {
 
   return (
     <>
-      <div>CharactersList</div>
-      <div className="card-list">
+
+      <div className="container">
+        <div className="left">
+          
+        </div>
+        <div className="middle">
+        <div className="card-list">
         {characters.map((character) => (
           <Cards key={character.id} character={character} />
         ))}
       </div>
+        </div>
+        <div className="right">
+        
+        </div>
+
+      </div>
+
+      
+      {/* <div className="card-list">
+        {characters.map((character) => (
+          <Cards key={character.id} character={character} />
+        ))}
+      </div> */}
     </>
   );
 }
