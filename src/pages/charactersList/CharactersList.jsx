@@ -17,6 +17,7 @@ export default function CharactersList() {
         const api = `https://rickandmortyapi.com/api/character/?page=${currentPage}`;
         const response = await fetch(api);
         const data = await response.json();
+        
         allCharacters = [...allCharacters, ...data.results];
 
         totalPages = data.info.pages;
@@ -24,6 +25,7 @@ export default function CharactersList() {
       } while (currentPage <= totalPages);
 
       setCharacters(allCharacters);
+      
     };
 
     fetchData();

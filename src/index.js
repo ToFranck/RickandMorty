@@ -9,6 +9,8 @@ import CharactersList from "./pages/charactersList/CharactersList";
 import Root from "./routes/root";
 import Home from "./pages/home/Home";
 import Episodes from "./pages/episodes/Episodes";
+import Character from "./pages/character/Character";
+
 
 
 
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
    
       { path: "/", element: <Home /> },
       { path: "characters", element: <CharactersList /> },
-      // { path: "characters/:id", element: <CharactersList /> },
+      { path: "characters/:id", element: <Character /> },
       { path: "episodes", element: <Episodes /> },
 
     ],
