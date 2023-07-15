@@ -15,4 +15,17 @@ code {
 
 a {
   text-decoration: none;
+  color: aliceblue;
 }
+
+p {
+  color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+
+  .search {
+    width: 200px !important;
+  }
+}
+  

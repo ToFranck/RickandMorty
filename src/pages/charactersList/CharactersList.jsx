@@ -2,44 +2,45 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../../components/cards/Cards";
 import "./CharactersList.css";
+import CharacterDetails from "../characterDetails/CharacterDetails";
 
-export default function CharactersList() {
+export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
-  const [nextPage, setNextPage] = useState("");
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const response = await fetch(
-      nextPage || "https://rickandmortyapi.com/api/character"
-    );
+    const response = await fetch("https://rickandmortyapi.com/api/character");
     const data = await response.json();
-    setCharacters((prevCharacters) => [...prevCharacters, ...data.results]);
-    setNextPage(data.info.next);
+    setCharacters(data.results);
   };
 
-  const loadMoreCharacters = () => {
-    fetchData();
+  const handleCardClick = (character) => {
+    setSelectedCharacter(character);
+    setShowDetails(true);
+  };
+
+  const handleLoadMore = async () => {
+    const response = await fetch("https://rickandmortyapi.com/api/character?page=2");
+    const data = await response.json();
+    setCharacters((prevCharacters) => [...prevCharacters, ...data.results]);
   };
 
   return (
-    <>
-      <div className="container">
-        <div className="left"></div>
-        <div className="middle">
-          <div className="card-list">
-            {characters.map((character, index) => (
-              <Cards key={`${character.id}-${index}`} character={character} />
-            ))}
-          </div>
-          {nextPage && (
-            <button onClick={loadMoreCharacters}>Charger plus</button>
-          )}
-        </div>
-        <div className="right"></div>
-      </div>
-    </>
+    <div>
+      {characters.map((character) => (
+        <Cards key={character.id} character={character} onClick={handleCardClick} />
+      ))}
+      
+      {showDetails && selectedCharacter && (
+        <CharacterDetails character={selectedCharacter} />
+      )}
+
+      <button onClick={handleLoadMore}>Charger plus</button>
+    </div>
   );
 }

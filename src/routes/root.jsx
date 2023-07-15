@@ -9,7 +9,7 @@ export default function Root() {
         <div className="nav">
             <Link to="/">Home</Link>
             <Link to="/characters">Characters</Link>
-            <Link to="/episodes">Episodes</Link>
+           
         </div>
         <Outlet />
       </>
