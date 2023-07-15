@@ -50,7 +50,7 @@ export default function Home() {
       <div className="bg"></div>
 
       <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Rick_and_Morty_logo.png" alt="" className="logo"/>
-      <h2>L'encyclopédie Rick and Morty : votre guide ultime pour tout savoir sur l'univers hilarant et chaotique de la série animée. Découvrez les personnages, les épisodes et les lieux fascinants qui rendent cette série unique. Explorez et plongez dans les aventures interdimensionnelles de Rick et Morty avec cette encyclopédie complète.</h2>
+      <h2 className="title">L'encyclopédie Rick and Morty : votre guide ultime pour tout savoir sur l'univers hilarant et chaotique de la série animée. Découvrez les personnages, les épisodes et les lieux fascinants qui rendent cette série unique. Explorez et plongez dans les aventures interdimensionnelles de Rick et Morty avec cette encyclopédie complète.</h2>
       {/* Ajoute le champ de recherche */}
       <input className="search"
         type="text"

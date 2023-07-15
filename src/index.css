@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #080e09;
+
 }
 
 code {
@@ -26,6 +28,15 @@ p {
 
   .search {
     width: 200px !important;
+  }
+
+  .logo {
+    width: 300px !important;
+    margin-top: 30px !important;
+  }
+
+  .title {
+    margin: 50px 10% 0 10% !important;
   }
 }
   
