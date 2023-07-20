@@ -1,0 +1,30 @@
+.btn-up {
+    position: fixed;
+    bottom: 45px;
+    right: 10px;
+    background-color: #1a1a1a;
+    color: aliceblue;
+    
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition: all 0.5s;
+  }
+  
+  .btn-up.show {
+    opacity: 1;
+  }
+
+    .btn-up:hover{
+        background-color: #080e09;
+        color: #52aa61;
+        border: 1px solid #52aa61;
+    }

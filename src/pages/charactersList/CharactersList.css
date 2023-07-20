@@ -11,27 +11,32 @@
 
 }
 
-/* 
-.container {
+.btn-part{
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    
+    justify-content: center;
+    margin: 20px 0 0 0;
+    margin-bottom: 50px;
 }
 
-.left {
-    
-    flex: 25%;
+
+.btn-more{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1a1a1a;
+    color: aliceblue;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+
 }
 
-.middle {
-    
-    flex: 50%;
+.btn-more:hover{
+    background-color: #080e09;
+    color: #52aa61;
+    border: 1px solid #52aa61;
 }
-
-.right {
-    flex: 25%;
-} */
 
 
 @media (max-width: 1600px) {

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Cards from "../../components/cards/Cards";
 import "./CharactersList.css";
 import CharacterDetails from "../characterDetails/CharacterDetails";
+import BtnUp from "../../components/cards/up/BtnUp";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -31,7 +32,8 @@ export default function CharacterList() {
   };
 
   return (
-    <div>
+    <>
+    <div className="card-list">
       {characters.map((character) => (
         <Cards key={character.id} character={character} onClick={handleCardClick} />
       ))}
@@ -39,8 +41,11 @@ export default function CharacterList() {
       {showDetails && selectedCharacter && (
         <CharacterDetails character={selectedCharacter} />
       )}
-
-      <button onClick={handleLoadMore}>Charger plus</button>
+    </div> 
+    <div className="btn-part">
+    <button onClick={handleLoadMore} className="btn-more">Charger plus</button>
     </div>
+    <BtnUp />
+    </>
   );
 }

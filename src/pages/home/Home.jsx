@@ -23,6 +23,7 @@ import React from "react";
 import "./Home.css";
 import { useState, useEffect } from "react";
 import Cards from "../../components/cards/Cards";
+import BtnUp from "../../components/cards/up/BtnUp";
 
 
 export default function Home() {
@@ -68,9 +69,11 @@ export default function Home() {
             ))
           ) : (
             <p>Aucun résultat trouvé.</p>
-          )}
+          )} 
+          
         </div>
-      )}
+        
+      )}<BtnUp />
     </div>
   );
 }

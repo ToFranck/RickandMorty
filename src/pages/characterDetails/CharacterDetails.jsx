@@ -18,11 +18,18 @@ export default function CharacterDetails() {
     return <div>Loading...</div>;
   }
 
+  console.log(character);
   return (
     <div>
       <h2>{character.name}</h2>
-      <p>Status: {character.status}</p>
-      <p>Species: {character.species}</p>
+
+      <img src={character.image} alt={character.name} className=''/>
+      <p>{character.status}</p>
+      <p>{character.species}</p>
+      <p>{character.type}</p>
+      <p>{character.gender}</p>
+     
+      
       
     </div>
   );
