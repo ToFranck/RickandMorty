@@ -7,8 +7,8 @@ export default function Root() {
     return (
       <>
         <div className="nav">
-            <Link to="/">Home</Link>
-            <Link to="/characters">Characters</Link>
+            <Link to="/" className="links">Home</Link>
+            <Link to="/characters" className="links">Characters</Link>
            
         </div>
         <Outlet />

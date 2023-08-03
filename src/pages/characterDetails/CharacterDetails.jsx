@@ -21,16 +21,18 @@ export default function CharacterDetails() {
   console.log(character);
   return (
     <div>
-      <h2>{character.name}</h2>
-
-      <img src={character.image} alt={character.name} className=''/>
-      <p>{character.status}</p>
-      <p>{character.species}</p>
-      <p>{character.type}</p>
-      <p>{character.gender}</p>
-     
-      
-      
+      <div className="character">
+        <div className="left">
+          <img src={character.image} alt={character.name} className="" />
+        </div>
+        <div className="right">
+          <h2>{character.name}</h2>
+          <p>{character.status}</p>
+          <p>{character.species}</p>
+          <p>{character.type}</p>
+          <p>{character.gender}</p>
+        </div>
+      </div>
     </div>
   );
 }
