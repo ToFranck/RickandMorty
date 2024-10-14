@@ -8,9 +8,10 @@ export default function Cards({ character }) {
     to={`/characters/${character.id}`}>
       <div className='card'>
         <img src={character.image} alt={character.name} className='card-img'/>
+        <div className="infos">
         <h2>{character.name}</h2>
-        <p>Status: {character.status}</p>
-        <p>Species: {character.species}</p>
+        {/* <p>Status: {character.status}</p>
+        <p>Species: {character.species}</p> */}</div>
       </div>
     </Link>
   );

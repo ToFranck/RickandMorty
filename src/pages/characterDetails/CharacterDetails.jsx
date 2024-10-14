@@ -22,16 +22,20 @@ export default function CharacterDetails() {
   return (
     <div>
       <div className="character">
-        <div className="left">
           <img src={character.image} alt={character.name} className="" />
-        </div>
-        <div className="right">
-          <h2>{character.name}</h2>
-          <p>{character.status}</p>
-          <p>{character.species}</p>
-          <p>{character.type}</p>
-          <p>{character.gender}</p>
-        </div>
+          <h2>{character.name}
+            <span>
+            {
+            character.status === "Alive" ? "🟢" : character.status === "Dead" ? "🔴" : "🟡"
+            }</span>
+            </h2>
+          
+          <div className="data">
+          <p>Origine : <strong>{character.location.name}</strong></p>
+          <p>Espece : <strong>{character.species}</strong></p>
+          <p>Type : <strong>{character.type}</strong></p>
+          <p>Genre : <strong>{character.gender}</strong></p>
+          </div>
       </div>
     </div>
   );

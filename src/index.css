@@ -1,5 +1,7 @@
 body {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -14,31 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-h2 {
-  color: aliceblue;
-}
+
 a {
   text-decoration: none;
-  color: aliceblue;
-}
-
-p {
-  color: aliceblue;
-}
-
-@media screen and (max-width: 768px) {
-
-  .search {
-    width: 200px !important;
-  }
-
-  .logo {
-    width: 300px !important;
-    margin-top: 30px !important;
-  }
-
-  .title {
-    margin: 50px 10% 0 10% !important;
-  }
-}
+  color: white;
   
+}
+
+

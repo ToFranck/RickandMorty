@@ -1,0 +1,21 @@
+input {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    background-color: #1a1a1a;
+    color: #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 40px auto 20px auto;
+    width: 300px;
+
+}
+
+input:focus {
+    border-bottom: 1px solid #52aa61;
+    background-color: #080e09;
+    color: #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 40px auto 20px auto;
+    width: 300px;
+}

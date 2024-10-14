@@ -1,0 +1,23 @@
+.random {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 5px 0px 5px;
+    width: 100%;
+    justify-content: center;
+
+    
+
+}
+
+@media (max-width: 1200px) {
+    .random {
+         margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .random {
+        /* flex-direction: column; */
+        margin-top: 20px;
+    }
+}
